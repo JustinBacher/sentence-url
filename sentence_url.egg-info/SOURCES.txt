@@ -1,0 +1,6 @@
+README.md
+setup.py
+sentence_url.egg-info/PKG-INFO
+sentence_url.egg-info/SOURCES.txt
+sentence_url.egg-info/dependency_links.txt
+sentence_url.egg-info/top_level.txt
