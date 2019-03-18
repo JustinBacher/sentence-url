@@ -10,35 +10,35 @@ with open("words/nouns.txt") as words_file:
 class SentenceURL:
 
     def __init__(self, word_count = 3, capitalize = True, seperator = ''):
-        self.self.word_count = word_count
+        self.word_count = word_count
         self.capitalize = capitalize
         self.seperator = seperator
 
     def generate():
-      """Generates readable URLs like Twitch's clips"""
+        """Generates readable URLs like Twitch's clips"""
 
-      if self.word_count < 2:
-        raise ValueError('Minimum value expected: 2')
-      elif self.word_count > 10:
-        raise ValueError('Maximum value expected: 10')
+        if self.word_count < 2:
+            raise ValueError('Minimum value expected: 2')
+        elif self.word_count > 10:
+            raise ValueError('Maximum value expected: 10')
 
-      noun = choice(nouns)
-      word_list = []
+        noun = choice(nouns)
+        word_list = []
 
-      if self.word_count > 3:
-        if noun in vowels:
-          word_list = ['an']
-        else:
-          word_list = [choice(('a', 'the'))]
+        if self.word_count > 3:
+            if noun in vowels:
+                word_list = ['an']
+            else:
+                word_list = [choice(('a', 'the'))]
 
-      word_list.extend(sample(adjectives, k = self.word_count-1))
+        word_list.extend(sample(adjectives, k = self.word_count-1))
 
-      if self.word_count > 4:
-        word_list.insert(2, 'and')
+        if self.word_count > 4:
+            word_list.insert(2, 'and')
 
-      word_list.append(noun)
+        word_list.append(noun)
 
-      if self.capitalize:
-        word_list = map(str.title, word_list)
+        if self.capitalize:
+            word_list = map(str.title, word_list)
 
-      return self.seperator.join(word_list)
+        return self.seperator.join(word_list)
