@@ -12,11 +12,11 @@ Example: https://clips.twitch.tv/WiseAcceptableSnoodPupper
 
 To install:
 
-    pip install readable-url
+    pip install sentence-url
 
 To import:
 
-    from sentence-url import SentenceURL
+    from sentence_url import SentenceURL
 
 ## Usage Instructions
 
